@@ -474,7 +474,7 @@ def main():
                         # Get RAG response
                         # ✏️ FILL IN: Replace ___ with the user's message variable
                         # 💡 HINT: st.session_state.agent.answer(prompt, verbose=False)
-                        result = st.session_state.agent.answer(___, verbose=False)
+                        result = st.session_state.agent.answer(prompt, verbose=False)
                         
                         # Display answer
                         st.markdown(result['answer'])
@@ -534,7 +534,7 @@ def main():
         if st.session_state.messages:
             # ✏️ FILL IN: Replace ___ with the button label "🗑️ Clear Chat History"
             # 💡 HINT: st.button("🗑️ Clear Chat History")
-            if st.button(___):
+            if st.button("🗑️ Clear Chat History", use_container_width=True, type="secondary"):
                 st.session_state.messages = []
                 st.rerun()
 
